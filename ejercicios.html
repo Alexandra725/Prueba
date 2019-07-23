@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <p>
+
+  </p>  
+    <script>
+    
+    var books = ["Ready player one", "El nombre del viento", "El temor de un hombre sabio", "Cien años de soledad", "Origen"];
+    var result = "";
+    var resultfinal = "";
+     for (var i = 0; i< books.length; i++){
+         if(result.length < books[i].length){
+             result = books.length + books[i].length
+         }
+     }
+     for (var i = 0; i< books.length;i++){
+         if(books === result){
+             resultfinal += books[i]. bold() + "[" + books[i].length + "]"
+         }
+         resultfinal +=books[i] + "[" + books[i].length +"]"
+     }
+resultfinal
+document.write(resultfinal)
+    </script>
+
+
+<h1> Cuadrados en array</h1>
+<script>
+
+function cuadrados(arr){
+var resultado = 0 ;
+for (var i = 0; i < arr.length; i++){
+    resultado = resultado + Math.pow(arr[i], 2);
+}
+document.write(resultado)
+}
+cuadrados([1,2,4]);
+</script>
+
+<h1>BinToDecimal</h1>
+
+<script>
+
+
+function BinToDecimal(num){
+    var result = 0;
+    var lastposition = num.length-1;
+    for (var i = 0; i < num.length; i++){
+        result += Math.pow(lastposition, 2) * Number(num.charAt(i));
+        lastposition--
+    }
+    document.write(result);
+}
+    BinToDecimal("1010");   
+
+</script>
+
+<h1> PosyNeg</h1>
+
+<script>
+function countPosSumNeg(numbers){
+    var posNeg = [0,0];
+    for (var i = 0; i< numbers.length; i++){
+        if (numbers[i]< 0){
+            posNeg[1] += numbers[i]
+        }else{
+        posNeg[0] += 1
+    }
+}
+document.write(posNeg)
+
+}
+countPosSumNeg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
+
+</script>
+ <h1> Corriguendo errores </h1>
+ <script> 
+ function corrigiendo(str){
+     var result = "";
+     for (var i = 0; i < str.length;i++ ){
+         switch(str.charAt(i)){
+             case "5":
+             result += "S"
+             break;
+             case "1":
+             result += "I";
+             break;
+             case "0":
+             result += "O";
+             break;
+             default:
+             result += str.charAt(i)
+             break;
+         }
+     }
+     document.write(result)
+ }
+ corrigiendo("15 L0ND0N")
+ </script>
+<h1>Par o Impar</h1>
+<script>
+function EvenOdd(num){
+
+
+var result = "";
+if (num % 2 === 0){
+ result = "Es par"
+}else{
+    result = "Es impar"
+}
+document.write(result)
+}
+EvenOdd(5)
+</script>
+
+
+<h1> Numeros al reves </h1>
+<script>
+ function reverse(number){
+     var result = "";
+     var StringNumber = number.toString();
+     for (var i = StringNumber.length - 1; i>= 0; i--){
+         if(i === 0 && StringNumber.charAt(0) == "-"){
+             result = StringNumber.charAt(i) + result;
+         }else{
+             result = StringNumber.charAt(i);
+         }
+     }
+     //console.log(result);
+     document.write(result);
+ }
+reverse(-1000);
+
+</script>
+
+
+<h1> Contando ovejas </h1>
+<script>
+ function counting(sheeps){
+     var result = 0;
+     for (var i = 0;i < sheeps.length; i++){
+         if(sheeps[i] === true){
+             result = result + 1
+         }
+     }
+     console.log(result)
+     document.write(result);
+ }
+counting([true,  true,  true,  false, true,  true,  true,  true , true,  false, true,  false, true,  false, false, true ,true,  true,  true,  true ,
+  false, false, true,  true])
+
+</script>
+
+<h1>String inverso</h1>
+<script>
+
+function inverso(str){
+    var result = "";
+    for (var i = str.length -1; i >= 0; i--){
+        result = result + str.charAt(i);
+    }
+    document.write(result);
+}
+inverso("mundo");
+
+
+
+</script>
+</body>
+</html>
